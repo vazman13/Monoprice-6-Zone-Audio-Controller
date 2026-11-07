@@ -36,21 +36,21 @@ from .const import (
 SET_BALANCE_SCHEMA = vol.Schema(
     {
         vol.Optional("entity_id", default=[]): vol.All(cv.ensure_list, [cv.string]),
-        vol.Optional(ATTR_BALANCE, default=0): vol.All(int, vol.Range(min=0, max=21))
+        vol.Optional(ATTR_BALANCE, default=10): vol.All(int, vol.Range(min=0, max=21))
     }
 )
 
 SET_BASS_SCHEMA = vol.Schema(
     {
         vol.Optional("entity_id", default=[]): vol.All(cv.ensure_list, [cv.string]),
-        vol.Optional(ATTR_BASS, default=5): vol.All(int, vol.Range(min=0, max=15))
+        vol.Optional(ATTR_BASS, default=7): vol.All(int, vol.Range(min=0, max=15))
     }
 )
 
 SET_TREBLE_SCHEMA = vol.Schema(
     {
         vol.Optional("entity_id", default=[]): vol.All(cv.ensure_list, [cv.string]),
-        vol.Optional(ATTR_TREBLE, default=5): vol.All(int, vol.Range(min=0, max=15))
+        vol.Optional(ATTR_TREBLE, default=7): vol.All(int, vol.Range(min=0, max=15))
     }
 )
 
