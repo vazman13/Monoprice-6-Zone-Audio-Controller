@@ -36,7 +36,7 @@ from .const import (
 SET_BALANCE_SCHEMA = vol.Schema(
     {
         vol.Optional("entity_id", default=[]): vol.All(cv.ensure_list, [cv.string]),
-        vol.Optional(ATTR_BALANCE, default=10): vol.All(int, vol.Range(min=-10, max=10))
+        vol.Optional(ATTR_BALANCE, default=10): vol.All(int, vol.Range(min=-0, max=20))
     }
 )
 
