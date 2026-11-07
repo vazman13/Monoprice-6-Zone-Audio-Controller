@@ -86,11 +86,11 @@ class MonopriceZone(NumberEntity):
             self._attr_native_max_value = 20
             self._attr_icon = "mdi:scale-balance"
         elif(control_type == "Bass"):
-            self._attr_native_min_value = -7
+            self._attr_native_min_value = 0
             self._attr_native_max_value = 14
             self._attr_icon = "mdi:speaker"
         elif(control_type == "Treble"):
-            self._attr_native_min_value = -7
+            self._attr_native_min_value = 0
             self._attr_native_max_value = 14
             self._attr_icon = "mdi:surround-sound"
             
