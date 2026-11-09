@@ -290,7 +290,7 @@ class MonopriceZone(MediaPlayerEntity):
  
     def set_bass(self, call) -> None:
         """Set bass level."""
-        level = int(call.data.get(ATTR_BASS))-7
+        level = eval(int(call.data.get(ATTR_BASS) - 7))
         self._monoprice.set_bass(self._zone_id, level)
 
     def set_treble(self, call) -> None:
