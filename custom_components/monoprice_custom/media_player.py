@@ -43,7 +43,7 @@ SET_BALANCE_SCHEMA = vol.Schema(
 SET_BASS_SCHEMA = vol.Schema(
     {
         vol.Optional("entity_id", default=[]): vol.All(cv.ensure_list, [cv.string]),
-        vol.Optional(ATTR_BASS, default=7): vol.All(int, vol.Range(min=0, max=15))
+        vol.Optional(ATTR_BASS, default=7): vol.All(int, vol.Range(min=-7, max=7))
     }
 )
 
