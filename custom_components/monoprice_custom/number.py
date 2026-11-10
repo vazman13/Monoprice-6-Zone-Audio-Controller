@@ -110,11 +110,11 @@ class MonopriceZone(NumberEntity):
             return
 
         if(self._control_type == "Balance"):
-            self._attr_native_value = state.balance
+            self._attr_native_value = state.balance-10
         elif(self._control_type == "Bass"):
             self._attr_native_value = state.bass-7
         elif(self._control_type == "Treble"):
-            self._attr_native_value = state.treble
+            self._attr_native_value = state.treble-7
 
     @property
     def entity_registry_enabled_default(self) -> bool:
@@ -126,8 +126,8 @@ class MonopriceZone(NumberEntity):
     def set_native_value(self, value: float) -> None:
         """Update the current value."""
         if(self._control_type == "Balance"):
-            self._monoprice.set_balance(self._zone_id, int(value))
+            self._monoprice.set_balance(self._zone_id, int(value)+10)
         elif(self._control_type == "Bass"):
             self._monoprice.set_bass(self._zone_id, int(value)+7)
         elif(self._control_type == "Treble"):
-            self._monoprice.set_treble(self._zone_id, int(value))
+            self._monoprice.set_treble(self._zone_id, int(value)+7)
