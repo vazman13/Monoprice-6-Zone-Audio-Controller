@@ -112,7 +112,7 @@ class MonopriceZone(NumberEntity):
         if(self._control_type == "Balance"):
             self._attr_native_value = state.balance
         elif(self._control_type == "Bass"):
-            self._attr_native_value = eval(state.bass-7)
+            self._attr_native_value = state.bass
         elif(self._control_type == "Treble"):
             self._attr_native_value = state.treble
 
@@ -128,6 +128,6 @@ class MonopriceZone(NumberEntity):
         if(self._control_type == "Balance"):
             self._monoprice.set_balance(self._zone_id, int(value))
         elif(self._control_type == "Bass"):
-            self._monoprice.set_bass(self._zone_id, int(value))
+            self._monoprice.set_bass(self._zone_id, int(value)-7)
         elif(self._control_type == "Treble"):
             self._monoprice.set_treble(self._zone_id, int(value))
