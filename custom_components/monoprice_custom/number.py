@@ -128,6 +128,6 @@ class MonopriceZone(NumberEntity):
         if(self._control_type == "Balance"):
             self._monoprice.set_balance(self._zone_id, int(value))
         elif(self._control_type == "Bass"):
-            self._monoprice.set_bass(self._zone_id, int(value)-7)
+            self._monoprice.set_bass(self._zone_id, int(value)+7)
         elif(self._control_type == "Treble"):
             self._monoprice.set_treble(self._zone_id, int(value))
